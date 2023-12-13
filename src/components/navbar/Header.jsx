@@ -7,10 +7,11 @@ import { Link } from "react-router-dom";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Sircon", href: "#" },
+  { name: "Sircon", href: "/sircon" },
   { name: "Membership", href: "/membership" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
+
 ];
 
 const Header = () => {

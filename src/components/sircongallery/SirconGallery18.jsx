@@ -41,7 +41,7 @@ function SirconGallery18() {
                             </div>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 {result.length === 0 ? (
-                                    <p>No posts to show now</p>
+                                    <p>No images to show now</p>
                                 ) : (
                                     result.map((item, index) => (
                                         <div key={index} data-aos="fade-down"
