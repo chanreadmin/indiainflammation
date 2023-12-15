@@ -69,11 +69,10 @@ export default function Team() {
           <h2 className="text-lg text-center font-bold tracking-tight text-gray-700 sm:text-4xl">
             Our Team
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-            iure dicta modi exercitationem asperiores laudantium! Reprehenderit,
-            temporibus, iure molestias quam aliquam ex suscipit in voluptatem
-            aut explicabo facilis veniam distinctio.
+          <p className="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000">
+            The Society constitution provides for an equal participation of clinicians and basic scientists in the organization set up, to blend both of them together. The executive committee will have an equal share of clinicians and basic scientists including the other office positions.
           </p>
         </div>
         <ul

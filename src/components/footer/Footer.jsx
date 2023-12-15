@@ -7,14 +7,14 @@ const Footer = () => {
         <div className="container mx-auto px-4 text-white">
           <div className="sm:flex sm:flex-wrap sm:-mx-4 md:py-4">
             <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6">
-              <h5 className="text-xl font-bold mb-6">Features</h5>
+              <h5 className="text-xl font-bold mb-6">Important Links</h5>
               <ul className="list-none footer-links">
                 <li className="mb-2">
                   <a
                     href="#"
                     className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
                   >
-                    Cool stuff
+                    Journals
                   </a>
                 </li>
                 <li className="mb-2">
@@ -22,7 +22,7 @@ const Footer = () => {
                     href="#"
                     className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
                   >
-                    Random feature
+                    About Us
                   </a>
                 </li>
                 <li className="mb-2">
@@ -30,7 +30,7 @@ const Footer = () => {
                     href="#"
                     className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
                   >
-                    Team feature
+                    Sircon
                   </a>
                 </li>
                 <li className="mb-2">
@@ -38,7 +38,7 @@ const Footer = () => {
                     href="#"
                     className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
                   >
-                    Stuff for developers
+                    Membership
                   </a>
                 </li>
                 <li className="mb-2">
@@ -46,17 +46,10 @@ const Footer = () => {
                     href="#"
                     className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
                   >
-                    Another one
+                    Gallery
                   </a>
                 </li>
-                <li className="mb-2">
-                  <a
-                    href="#"
-                    className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800"
-                  >
-                    Last time
-                  </a>
-                </li>
+
               </ul>
             </div>
             <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 sm:mt-0">

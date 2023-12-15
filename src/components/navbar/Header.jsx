@@ -10,6 +10,7 @@ const navigation = [
   { name: "Sircon", href: "/sircon" },
   { name: "Membership", href: "/membership" },
   { name: "Gallery", href: "/gallery" },
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 
 ];

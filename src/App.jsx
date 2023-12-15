@@ -20,6 +20,9 @@ import SirconGallery21 from "./components/sircongallery/SirconGallery21";
 import SirconGallery22 from "./components/sircongallery/SirconGallery22";
 import SirconGallery23 from "./components/sircongallery/SirconGallery23";
 import Sircon from "./pages/sircon/Sircon";
+// import Team from "./components/team/Team";
+import PostDetails from "./components/posts/PostDetails";
+import Blog from "./pages/blog/Blog";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -44,6 +47,8 @@ function App() {
           <Route path="/sircongallery22" element={<SirconGallery22 />} />
           <Route path="/sircongallery23" element={<SirconGallery23 />} />
           <Route path="/sircon" element={<Sircon />} />
+          <Route path="/postdetails/:id" element={<PostDetails />} />
+          <Route path="/blog" element={<Blog />} />
 
         </Routes>
       </BrowserRouter>
