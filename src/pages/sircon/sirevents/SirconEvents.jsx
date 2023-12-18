@@ -1,19 +1,19 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { MediaUrl } from '../../ApiUrl'
+import { URL } from '../../../ApiUrl'
 
-function PostDetails() {
-    const [post, setPost] = useState({})
+function SirconEvents() {
+    const [data, setData] = useState({})
     const param = useParams()
-    console.log(param.id)
-    const fetchpost = () => {
-        axios.get(`http://localhost/inflammation/admin/api/singlepost.php?id=${param.id}`).then(res => setPost(res.data))
+    const fetchdata = () => {
+        axios.get(URL + `sirconevent.php?id=${param.id}`).then(res => setData(res.data))
     }
 
     useEffect(() => {
-        fetchpost();
+        fetchdata()
     }, [])
+
     return (
         <div className="bg-white">
             <div className="relative isolate px-6 pt-2 lg:px-8">
@@ -29,18 +29,16 @@ function PostDetails() {
                         }}
                     />
                 </div>
-                <div className="mx-auto max-w-2xl py-32 sm:py-35 lg:py-35">
-                    <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+                <div className="mx-auto max-w-4xl py-32 sm:py-35 lg:py-35">
+                    <div className="hidden sm:mb-2 sm:flex sm:justify-center">
 
                     </div>
-                    <div className="">
-                        <h1 className="text-xl font-medium tracking-tight sm:text-2xl">
-                            {post.PostTitle}
+                    <div className=''>
+                        <h1 className="text-center text-xl font-bold tracking-tight sm:text-4xl" >
+                            SIRCON {data.sirconyear}
                         </h1>
-                        <img src={MediaUrl + post.PostImage} alt="image" className='mt-4 rounded-lg' />
-                        <div className="mt-6 text-xl leading-6 text-gray-600">
-
-                            <div dangerouslySetInnerHTML={{ __html: post.PostDetails }} />
+                        <div className="mt-6 text-lg leading-8 text-gray-600 flex justify-center">
+                            <div dangerouslySetInnerHTML={{ __html: data.PostDetails }} />
                         </div>
 
                     </div>
@@ -62,4 +60,4 @@ function PostDetails() {
     )
 }
 
-export default PostDetails
+export default SirconEvents

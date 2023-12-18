@@ -2,15 +2,29 @@ import React, { useEffect, useState } from 'react'
 
 import sirconImage from '../../SirconImage.json'
 import GalleryMenu from './GalleryMenu';
-function SirconGallery17() {
+import axios from 'axios';
+import { MediaUrl, URL } from '../../ApiUrl';
+import { useParams } from 'react-router-dom';
+function SirconGallery() {
     const [data, setData] = useState([])
-    const result = data.filter(checkData);
-    console.log(result)
-    function checkData(data) {
-        return data.sircon == 2017;
+    const param = useParams()
+
+    const fetchData = async () => {
+        await axios.get(URL + `gallery.php`).then(res => setData(res.data))
     }
+
+
+
+    const filteredData = data.filter((item) =>
+    (
+        item.postyear == param.id,
+        console.log("item year", item.postyear)
+    ));
+
+    console.log('================Filtered ============', filteredData);
+
     useEffect(() => {
-        setData(sirconImage)
+        fetchData()
     }, [])
     return (
         <div>
@@ -41,14 +55,14 @@ function SirconGallery17() {
                             </div>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
 
-                                {result.length === 0 ? (
+                                {filteredData.length === 0 ? (
                                     <p>No images to show now</p>
                                 ) : (
-                                    result.map((item, index) => (
+                                    filteredData.map((item, index) => (
                                         <div key={index} data-aos="fade-down"
                                             data-aos-easing="linear"
                                             data-aos-duration="1500">
-                                            <img className="h-auto max-w-full rounded-lg" src={item.ImgUrl} alt="img" />
+                                            <img className="h-auto max-w-full rounded-lg" src={MediaUrl + item.PostImage} alt="img" />
                                         </div>
                                     ))
                                 )}
@@ -77,4 +91,4 @@ function SirconGallery17() {
     )
 }
 
-export default SirconGallery17
+export default SirconGallery

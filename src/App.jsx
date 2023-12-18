@@ -12,7 +12,7 @@ import Gallery from "./pages/gallery/Gallery";
 import Contact from "./pages/contact/Contact";
 import AOS from "aos";
 import 'aos/dist/aos.css';
-import SirconGallery17 from "./components/sircongallery/SirconGallery17";
+import SirconGallery from "./components/sircongallery/SirconGallery";
 import SirconGallery18 from "./components/sircongallery/SirconGallery18";
 import SirconGallery19 from "./components/sircongallery/SirconGallery19";
 import SirconGallery20 from "./components/sircongallery/SirconGallery20";
@@ -23,6 +23,7 @@ import Sircon from "./pages/sircon/Sircon";
 // import Team from "./components/team/Team";
 import PostDetails from "./components/posts/PostDetails";
 import Blog from "./pages/blog/Blog";
+import SirconEvents from "./pages/sircon/sirevents/SirconEvents";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -39,7 +40,7 @@ function App() {
           <Route path="/membership" element={<Membership />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/sircongallery17" element={<SirconGallery17 />} />
+          <Route path="/sircongallery/:postyear" element={<SirconGallery />} />
           <Route path="/sircongallery18" element={<SirconGallery18 />} />
           <Route path="/sircongallery19" element={<SirconGallery19 />} />
           <Route path="/sircongallery20" element={<SirconGallery20 />} />
@@ -49,6 +50,7 @@ function App() {
           <Route path="/sircon" element={<Sircon />} />
           <Route path="/postdetails/:id" element={<PostDetails />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/sirconevent/:id" element={<SirconEvents />} />
 
         </Routes>
       </BrowserRouter>
