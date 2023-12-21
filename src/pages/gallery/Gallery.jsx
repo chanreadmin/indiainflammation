@@ -45,10 +45,8 @@ const Gallery = () => {
 
               {data.map((item, index) => {
                 return (
-                  <div key={index} data-aos="fade-down"
-                    data-aos-easing="linear"
-                    data-aos-duration="1500">
-                    <img className="h-auto max-w-full rounded-lg" src={MediaUrl + item.PostImage} alt="img" />
+                  <div key={index} >
+                    <img loading="lazy" className="h-auto max-w-full rounded-lg" src={MediaUrl + item.PostImage} alt="img" />
                   </div>
                 )
               })}

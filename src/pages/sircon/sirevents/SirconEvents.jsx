@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { URL } from '../../../ApiUrl'
+import './sirconEvent.css'
 
 function SirconEvents() {
     const [data, setData] = useState({})
@@ -15,7 +16,7 @@ function SirconEvents() {
     }, [])
 
     return (
-        <div className="bg-white">
+        <div className="bg-white ">
             <div className="relative isolate px-6 pt-2 lg:px-8">
                 <div
                     className="absolute inset-x-0 -top-30 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"

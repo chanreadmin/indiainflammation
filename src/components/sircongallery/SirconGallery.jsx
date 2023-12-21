@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 import sirconImage from '../../SirconImage.json'
 import GalleryMenu from './GalleryMenu';
@@ -15,16 +15,23 @@ function SirconGallery() {
 
 
 
-    const filteredData = data.filter((item) =>
-    (
-        item.postyear == param.id,
-        console.log("item year", item.postyear)
-    ));
+    // const filteredData = data.filter((item) =>
+    // (
+    //     item.postyear == param.id
+
+    // ));
+
+    const filteredData = data.filter(checkData);
+    console.log(filteredData)
+    function checkData(data) {
+        return data.postyear == param.id;
+    }
 
     console.log('================Filtered ============', filteredData);
 
     useEffect(() => {
         fetchData()
+
     }, [])
     return (
         <div>
@@ -59,10 +66,8 @@ function SirconGallery() {
                                     <p>No images to show now</p>
                                 ) : (
                                     filteredData.map((item, index) => (
-                                        <div key={index} data-aos="fade-down"
-                                            data-aos-easing="linear"
-                                            data-aos-duration="1500">
-                                            <img className="h-auto max-w-full rounded-lg" src={MediaUrl + item.PostImage} alt="img" />
+                                        <div key={index} >
+                                            <img loading="lazy" className="h-auto max-w-full rounded-lg" src={MediaUrl + item.PostImage} alt="img" />
                                         </div>
                                     ))
                                 )}

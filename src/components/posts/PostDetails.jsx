@@ -1,14 +1,14 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { MediaUrl } from '../../ApiUrl'
+import { MediaUrl, URL } from '../../ApiUrl'
 
 function PostDetails() {
     const [post, setPost] = useState({})
     const param = useParams()
     console.log(param.id)
     const fetchpost = () => {
-        axios.get(`http://localhost/inflammation/admin/api/singlepost.php?id=${param.id}`).then(res => setPost(res.data))
+        axios.get(URL + `singlepost.php?id=${param.id}`).then(res => setPost(res.data))
     }
 
     useEffect(() => {
