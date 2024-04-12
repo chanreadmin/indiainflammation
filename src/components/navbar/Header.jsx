@@ -12,17 +12,21 @@ const navigation = [
   { name: "Gallery", href: "/gallery" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
   { name: "Journal", href: "https://www.chanrejournals.com/journal/4" },
 >>>>>>> Stashed changes
+=======
+  { name: "Journal", href: "https://www.chanrejournals.com/" },
+>>>>>>> b9e17fde960e516746e3e555fdf1d15f67429e07
 
 ];
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className=" shadow-md sticky inset-x-0 top-0 z-50 bg-white">
       <nav
         className="flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -32,7 +36,7 @@ const Header = () => {
             <span className="sr-only">Indiainflammation</span>
             <img
               className="h-10 w-auto"
-              src="https://indiainflammation.org/assets/media/logo.png"
+              src="../assets/logo.png"
               alt=""
             />
           </a>
@@ -59,12 +63,12 @@ const Header = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href="#"
+          <Link
+            to={'/donate'}
             className="text-md p-2 rounded-md bg-indigo-500 hover:bg-green-600 text-white font-bold leading-6 "
           >
             Donate Now<span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog

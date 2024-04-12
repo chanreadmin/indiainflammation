@@ -6,6 +6,7 @@ import SirconMenu from "../../components/sirconmenu/SirconMenu";
 import Popup from "../../components/popup/Popup";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { MediaUrl, URL } from "../../ApiUrl";
 
 const Home = () => {
 
@@ -18,7 +19,7 @@ const Home = () => {
   const [popup, setPopup] = useState([])
 
   const fetchpopup = async () => {
-    await axios.get(`http://localhost/inflammation/admin/api/popup.php`).then(res => setPopup(res.data))
+    await axios.get(URL + `popup.php`).then(res => setPopup(res.data))
   }
   // console.log(popup)
   useEffect(() => {
@@ -38,8 +39,8 @@ const Home = () => {
           {
             popup.map((item, index) => {
               return (
-                <>
-                  <img key={index} src={"http://localhost/inflammation/admin/postimages/" + item.imgTitle} alt="" className="h-[315px] w-full" onClick={handleClosePopup} data-aos="fade-down"
+                <div key={index}>
+                  <img key={index} src={MediaUrl + item.imgTitle} alt="" className="h-[315px] w-full" onClick={handleClosePopup} data-aos="fade-down"
                     data-aos-easing="linear"
                     data-aos-duration="1500" />
                   {
@@ -59,7 +60,7 @@ const Home = () => {
                     </div> : ''
                   }
 
-                </>
+                </div>
               )
             })
           }

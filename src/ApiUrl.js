@@ -1,2 +1,2 @@
-export const URL = `http://localhost/inflammation/admin/api/`
-export const MediaUrl = `http://localhost/inflammation/admin/postimages/`
+export const URL = `https://chanre.com/inflammation/admin/api/`
+export const MediaUrl = `https://chanre.com/inflammation/admin/postimages/`

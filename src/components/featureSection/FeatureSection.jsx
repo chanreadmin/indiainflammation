@@ -2,12 +2,13 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Posts from '../posts/Posts'
+import { MediaUrl, URL } from '../../ApiUrl'
 
 function FeatureSection(props) {
     const [popup, setPopup] = useState([])
 
     const fetchpopup = async () => {
-        await axios.get(`http://localhost/inflammation/admin/api/popup.php`).then(res => setPopup(res.data))
+        await axios.get(URL + `popup.php`).then(res => setPopup(res.data))
     }
     useEffect(() => {
         fetchpopup()
@@ -24,7 +25,7 @@ function FeatureSection(props) {
                 <h1 className='font-bold text-xl text-center p-3 rounded-md bg-orange-500 text-white'>Notifications</h1>
                 {popup.map((item, index) => {
                     return (
-                        <img key={index} className='mt-2 rounded-xl p-2' src={"http://localhost/inflammation/admin/postimages/" + item.imgTitle} alt="img" />
+                        <img key={index} className='mt-2 rounded-xl p-2' src={MediaUrl + item.imgTitle} alt="img" />
 
                     )
                 })}

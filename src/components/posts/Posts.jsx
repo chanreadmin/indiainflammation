@@ -1,12 +1,13 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { URL } from '../../ApiUrl'
 
 function Posts() {
     const [posts, setPosts] = useState([])
     console.log(posts)
     const fetchPost = () => {
-        axios.get(`http://localhost/inflammation/admin/api/posts.php`).then(res => setPosts(res.data))
+        axios.get(URL + `posts.php`).then(res => setPosts(res.data))
     }
     useEffect(() => {
         fetchPost()

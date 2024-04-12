@@ -1,13 +1,14 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { MediaUrl, URL } from '../../ApiUrl'
 
 function PostDetails() {
     const [post, setPost] = useState({})
     const param = useParams()
     console.log(param.id)
     const fetchpost = () => {
-        axios.get(`http://localhost/inflammation/admin/api/singlepost.php?id=${param.id}`).then(res => setPost(res.data))
+        axios.get(URL + `singlepost.php?id=${param.id}`).then(res => setPost(res.data))
     }
 
     useEffect(() => {
@@ -36,6 +37,7 @@ function PostDetails() {
                         <h1 className="text-xl font-medium tracking-tight sm:text-2xl">
                             {post.PostTitle}
                         </h1>
+                        <img src={MediaUrl + post.PostImage} alt="image" className='mt-4 rounded-lg' />
                         <div className="mt-6 text-xl leading-6 text-gray-600">
 
                             <div dangerouslySetInnerHTML={{ __html: post.PostDetails }} />

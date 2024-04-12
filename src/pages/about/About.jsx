@@ -40,7 +40,9 @@ const About = () => {
             educational activities, policy work, and offering awards
             and grants to researchers and students.
           </p>
-          <h2 className="font-bold text-gray-600 mt-6 text-2xl">Foundation</h2>
+          <h2 className="font-bold text-gray-600 mt-6 text-2xl" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">Foundation</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500">
@@ -48,7 +50,9 @@ const About = () => {
           </p>
 
 
-          <h2 className="font-bold text-gray-600 mt-6 text-2xl">Constitution</h2>
+          <h2 className="font-bold text-gray-600 mt-6 text-2xl" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">Constitution</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500">
@@ -56,7 +60,9 @@ const About = () => {
           </p>
 
 
-          <h2 className="font-bold text-gray-600 mt-6 text-2xl">Objectives</h2>
+          <h2 className="font-bold text-gray-600 mt-6 text-2xl" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">Objectives</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500">
