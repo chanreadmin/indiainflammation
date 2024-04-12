@@ -29,7 +29,7 @@ function PostDetails() {
                         }}
                     />
                 </div>
-                <div className="mx-auto max-w-2xl py-32 sm:py-35 lg:py-35">
+                <div className="mx-auto max-w-2xl py-5 sm:py-5 lg:py-5">
                     <div className="hidden sm:mb-8 sm:flex sm:justify-center">
 
                     </div>

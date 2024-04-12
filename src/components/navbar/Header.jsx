@@ -12,7 +12,7 @@ const navigation = [
   { name: "Gallery", href: "/gallery" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
-  { name: "Journal", href: "https://www.chanrejournals.com/" },
+  { name: "Journal", href: "https://www.chanrejournals.com/journal/4" },
 
 ];
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Donate = () => {
-  return (<div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+  return (<div className="isolate bg-white px-6 py-8 sm:py-8 lg:px-8">
     <div
       className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
       aria-hidden="true"
@@ -22,6 +22,46 @@ const Donate = () => {
     </div>
     <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
       <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+        <div>
+          <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
+            Amount
+          </label>
+          <div className="mt-2.5">
+            <input
+              type="text"
+              name="amount"
+              id="amount"
+              autoComplete="amount" placeholder="Enter amount"
+              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            />
+          </div>
+        </div>
+        <div className="gap-4">
+          <label htmlFor="gift" className="block text-sm font-semibold leading-6 text-gray-900">
+            Type of Gift
+          </label>
+          <div className="mt-2.5">
+            <input type="radio" value="One-time" name="gift" id="gift" /> One-time gift &nbsp;
+            <input type="radio" value="Recurring" name="gift" id="gift" /> Recurring gift
+          </div>
+        </div>
+
+        <div className="sm:col-span-2">
+          <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
+            What brought you to the site to give today?
+          </label>
+          <div className="mt-2.5">
+            <select className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" id="" name="source">
+              <option value="My Rheumatologist">My Rheumatologist</option>
+              <option value="Word of Mouth">Word of Mouth</option>
+              <option value="Social Media">Social Media</option>
+              <option value="Society of Inflammation Research">Society of Inflammation Research</option>
+              <option value="Web Search">Web Search</option>
+              <option value="Letter from the Foundation">Letter from the Foundation</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
         <div>
           <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
             First name

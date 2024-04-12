@@ -16,7 +16,7 @@ const About = () => {
           }}
         />
       </div>
-      <div className="mx-auto max-w-4xl py-32 sm:py-35 lg:py-35">
+      <div className="mx-auto max-w-4xl py-8 sm:py-8 lg:py-8">
 
         <div className="">
           <h1 className="text-xl text-center font-bold tracking-tight sm:text-4xl">

@@ -23,11 +23,11 @@ export default function Navbar() {
 
   return (
     <div className=" bg-gradient-to-r from-cyan-500 to-blue-500 mb-8 backdrop-blur-md">
-      <div className="relative isolate px-6 pt-2 lg:px-8 bg-[url('../assets/inflammation.png')] bg-cover bg-no-repeat  ">
+      <div className="relative isolate px-6 pt-2 lg:px-8 bg-[url('../assets/inflammation.png')] bg-cover bg-no-repeat">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
 
           <div className="text-center">
-            <h1 className="text-2xl font-bold tracking-tight sm:text-4xl text-white" >
+            <h1 className="text-2xl font-bold tracking-tight sm:text-4xl text-white"  >
               Society of Inflammation Research
             </h1>
             <p className="mt-6 text-lg leading-8 text-white">

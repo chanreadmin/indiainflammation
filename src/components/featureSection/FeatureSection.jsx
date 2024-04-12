@@ -16,11 +16,12 @@ function FeatureSection(props) {
 
     return (
         <div className='container mx-auto grid md:grid-cols-3 grid-cols-1 gap-2 '>
-            <div className='w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md'>
+            <div className='shadow-lg w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md'>
                 <h1 className='font-bold text-xl rounded-md text-center p-3  bg-orange-500 text-white'>Latest News</h1>
                 <Posts />
             </div>
-            <div className=' antialiased w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md' >
+
+            <div className='shadow-lg antialiased w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md' >
                 <h1 className='font-bold text-xl text-center p-3 rounded-md bg-orange-500 text-white'>Notifications</h1>
                 {popup.map((item, index) => {
                     return (
@@ -29,7 +30,8 @@ function FeatureSection(props) {
                     )
                 })}
             </div>
-            <div className='antialiased w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md'>
+
+            <div className='shadow-lg antialiased w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md'>
                 <h1 className='font-bold text-xl text-center p-3 rounded-md bg-orange-500 text-white'>Objectives</h1>
                 <p className='p-4 text-lg leading-8 text-white' data-aos="fade-down"
                     data-aos-easing="linear"

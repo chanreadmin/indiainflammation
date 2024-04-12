@@ -30,7 +30,7 @@ function SirconEvents() {
                         }}
                     />
                 </div>
-                <div className="mx-auto max-w-4xl py-32 sm:py-35 lg:py-35">
+                <div className="mx-auto max-w-4xl py-12 sm:py-12 lg:py-12">
                     <div className="hidden sm:mb-2 sm:flex sm:justify-center">
 
                     </div>
