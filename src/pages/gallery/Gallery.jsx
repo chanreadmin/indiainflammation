@@ -2,11 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import sirconImage from '../../SirconImage.json'
 import GalleryMenu from "../../components/sircongallery/GalleryMenu";
+import axios from "axios";
+import { MediaUrl, URL } from "../../ApiUrl";
 const Gallery = () => {
   const [data, setData] = useState([])
+  const fetchData = () => {
+    axios.get(URL + `gallery.php`).then(res => setData(res.data))
+  }
 
   useEffect(() => {
-    setData(sirconImage)
+    fetchData()
   }, [])
   return <div>
     <div className="bg-white">
@@ -40,10 +45,8 @@ const Gallery = () => {
 
               {data.map((item, index) => {
                 return (
-                  <div key={index} data-aos="fade-down"
-                    data-aos-easing="linear"
-                    data-aos-duration="1500">
-                    <img className="h-auto max-w-full rounded-lg" src={item.ImgUrl} alt="img" />
+                  <div key={index} >
+                    <img loading="lazy" className="h-auto max-w-full rounded-lg" src={MediaUrl + item.PostImage} alt="img" />
                   </div>
                 )
               })}
