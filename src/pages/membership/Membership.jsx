@@ -1,4 +1,5 @@
 import React from "react";
+// import membershipfile from '../../../public/assets/'
 
 const Membership = () => {
   return (
@@ -17,24 +18,15 @@ const Membership = () => {
               }}
             />
           </div>
-          <div className="mx-auto max-w-2xl py-32 sm:py-35 lg:py-35">
+          <div className="mx-auto max-w-2xl py-5 sm:py-5 lg:py-5">
             <div className="hidden sm:mb-8 md:flex md:justify-center">
-              {/* <div className="relative rounded-full px-3 py-1 text-md leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                Announcing our next SIRCON Events.{" "}
-                <a href="#" className="font-semibold text-indigo-600">
-                  <span className="absolute inset-0" aria-hidden="true" />
-                  Read more <span aria-hidden="true">&rarr;</span>
-                </a>
-              </div> */}
+
             </div>
             <div className="">
               <h1 className="text-xl text-center font-bold tracking-tight sm:text-4xl">
                 Membership Details
               </h1>
-              {/* <p className="mt-6 text-lg leading-8 text-gray-600">
-                Envisaged in August 2015 and registered in July 2017, SIR is a
-                non-profit association.
-              </p> */}
+
 
               <div className="flex items-center justify-center">
                 <table className="table mt-8 items-center border-collapse border border-slate-400">
@@ -69,17 +61,12 @@ const Membership = () => {
 
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
-                  href="https://indiainflammation.org/assets/media/SIR_Membership_Form.pdf"
+                  href="assets/sir-membership.pdf"
                   className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Download Membership Form
                 </a>
-                {/* <a
-                  href="#"
-                  className="shadow-md rounded-md bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white  hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Learn more <span aria-hidden="true">→</span>
-                </a> */}
+
               </div>
             </div>
           </div>

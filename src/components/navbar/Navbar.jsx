@@ -22,6 +22,7 @@ export default function Navbar() {
   }, []);
 
   return (
+<<<<<<< Updated upstream
     <div className="bg-white">
       <div className="relative isolate px-6 pt-2 lg:px-8">
         <div
@@ -36,6 +37,10 @@ export default function Navbar() {
             }}
           />
         </div>
+=======
+    <div className=" bg-gradient-to-r from-cyan-500 to-blue-500 mb-8 backdrop-blur-md">
+      <div className="relative isolate px-6 pt-2 lg:px-8 bg-[url('../assets/inflammation.png')] bg-cover bg-no-repeat">
+>>>>>>> Stashed changes
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-md leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -47,7 +52,11 @@ export default function Navbar() {
             </div>
           </div>
           <div className="text-center">
+<<<<<<< Updated upstream
             <h1 className="text-xl font-bold tracking-tight sm:text-4xl" style={{ color: `${textColor}` }}>
+=======
+            <h1 className="text-2xl font-bold tracking-tight sm:text-4xl text-white"  >
+>>>>>>> Stashed changes
               Society of Inflammation Research
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">

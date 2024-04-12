@@ -1,9 +1,22 @@
-import React from 'react'
-import Card from './sircomp/Card'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import { URL } from '../../../ApiUrl'
+import './sirconEvent.css'
 
-function Sircon() {
+function SirconEvents() {
+    const [data, setData] = useState({})
+    const param = useParams()
+    const fetchdata = () => {
+        axios.get(URL + `sirconevent.php?id=${param.id}`).then(res => setData(res.data))
+    }
+
+    useEffect(() => {
+        fetchdata()
+    }, [])
+
     return (
-        <div className="bg-white">
+        <div className="bg-white ">
             <div className="relative isolate px-6 pt-2 lg:px-8">
                 <div
                     className="absolute inset-x-0 -top-30 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -17,23 +30,18 @@ function Sircon() {
                         }}
                     />
                 </div>
-                <div className="mx-auto max-w-4xl py-5 sm:py-5 lg:py-5">
-                    <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                        {/* <div className="relative rounded-full px-3 py-1 text-md leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                            Announcing our next SIRCON Events.{" "}
-                            <a href="#" className="font-semibold text-indigo-600">
-                                <span className="absolute inset-0" aria-hidden="true" />
-                                Read more <span aria-hidden="true">&rarr;</span>
-                            </a>
-                        </div> */}
+                <div className="mx-auto max-w-4xl py-12 sm:py-12 lg:py-12">
+                    <div className="hidden sm:mb-2 sm:flex sm:justify-center">
+
                     </div>
-                    <div className="text-center">
-                        <h1 className="text-xl font-bold tracking-tight sm:text-4xl">
-                            SIRCON
+                    <div className=''>
+                        <h1 className="text-center text-xl font-bold tracking-tight sm:text-4xl" >
+                            SIRCON {data.sirconyear}
                         </h1>
-                    </div>
-                    <div className='flex gap-2'>
-                        <Card />
+                        <div className="mt-6 text-lg leading-8 text-gray-600 flex justify-center">
+                            <div dangerouslySetInnerHTML={{ __html: data.PostDetails }} />
+                        </div>
+
                     </div>
                 </div>
                 <div
@@ -53,4 +61,4 @@ function Sircon() {
     )
 }
 
-export default Sircon
+export default SirconEvents

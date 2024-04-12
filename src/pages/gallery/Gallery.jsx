@@ -23,7 +23,7 @@ const Gallery = () => {
             }}
           />
         </div>
-        <div className="mx-auto max-w-4xl py-32 sm:py-35 lg:py-35">
+        <div className="mx-auto max-w-4xl py-5 sm:py-5 lg:py-5">
 
           <div className="text-center">
             <h1 className="text-xl font-bold tracking-tight sm:text-4xl">
