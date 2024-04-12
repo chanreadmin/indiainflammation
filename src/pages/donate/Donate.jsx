@@ -1,6 +1,7 @@
 import React from "react";
 
 const Donate = () => {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< Updated upstream
   return <div>Donate</div>;
@@ -9,6 +10,9 @@ const Donate = () => {
 =======
   return (<div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
 >>>>>>> b9e17fde960e516746e3e555fdf1d15f67429e07
+=======
+  return (<div className="isolate bg-white px-6 py-8 sm:py-8 lg:px-8">
+>>>>>>> Stashed changes
     <div
       className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
       aria-hidden="true"
@@ -31,7 +35,10 @@ const Donate = () => {
       <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         <div>
           <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
             Amount
           </label>
           <div className="mt-2.5">
@@ -72,8 +79,11 @@ const Donate = () => {
         </div>
         <div>
           <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
+<<<<<<< Updated upstream
 =======
 >>>>>>> b9e17fde960e516746e3e555fdf1d15f67429e07
+=======
+>>>>>>> Stashed changes
             First name
           </label>
           <div className="mt-2.5">

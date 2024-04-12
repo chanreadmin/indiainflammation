@@ -30,11 +30,15 @@ function SirconEvents() {
                         }}
                     />
                 </div>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                 <div className="mx-auto max-w-4xl py-12 sm:py-12 lg:py-12">
 =======
                 <div className="mx-auto max-w-4xl py-32 sm:py-35 lg:py-35">
 >>>>>>> b9e17fde960e516746e3e555fdf1d15f67429e07
+=======
+                <div className="mx-auto max-w-4xl py-12 sm:py-12 lg:py-12">
+>>>>>>> Stashed changes
                     <div className="hidden sm:mb-2 sm:flex sm:justify-center">
 
                     </div>

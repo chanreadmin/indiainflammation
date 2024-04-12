@@ -12,6 +12,7 @@ const navigation = [
   { name: "Gallery", href: "/gallery" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
@@ -20,6 +21,9 @@ const navigation = [
 =======
   { name: "Journal", href: "https://www.chanrejournals.com/" },
 >>>>>>> b9e17fde960e516746e3e555fdf1d15f67429e07
+=======
+  { name: "Journal", href: "https://www.chanrejournals.com/journal/4" },
+>>>>>>> Stashed changes
 
 ];
 
